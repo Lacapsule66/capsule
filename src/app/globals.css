@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Ayer Poster';
+    src: local('Ayer Poster Medium'), local('Ayer-Poster-Medium'), url('font/AyerPoster-Medium.woff2') format('woff2'), url('font/AyerPoster-Medium.woff') format('woff'),
+      url('font/AyerPoster-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
