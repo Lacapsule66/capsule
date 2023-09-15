@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://sante.agence-la-capsule.fr/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+     <url>
+        <loc>https://sante.agence-la-capsule.fr/tarifs</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+     <url>
+        <loc>https://sante.agence-la-capsule.fr/team</loc>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+     <url>
+        <loc>https://sante.agence-la-capsule.fr/annuaire</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://sante.agence-la-capsule.fr/contact</loc>
+        <lastmod>2023-06-03</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
