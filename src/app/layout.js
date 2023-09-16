@@ -3,8 +3,7 @@ import Header2 from '@/components/Header2'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
-import { Suspense, useState, useEffect } from 'react'
-import gsap from "gsap"
+import { Suspense } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +14,6 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 
-    // gsap.to("#ok", {rotate: 360, duration: 2, repeat: -1, ease: "none"})
 
    
   return (
