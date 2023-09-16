@@ -4,6 +4,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
 import { Suspense, useState, useEffect } from 'react'
+import gsap from "gsap"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,39 +14,21 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  const [loadingProgress, setLoadingProgress] = useState(0);
 
-  useEffect(() => {
-    const updateProgress = () => {
-      if (document.readyState === 'complete') {
-        setLoadingProgress(100);
-      } else {
-        setLoadingProgress((document.readyState === 'loading' ? 10 : 90) + Math.floor(Math.random() * 10));
-      }
-    };
+    gsap.to("#ok", {rotate: 360, duration: 2, repeat: -1, ease: "none"})
 
-    window.addEventListener('load', updateProgress);
-    document.addEventListener('readystatechange', updateProgress);
-
-    return () => {
-      window.removeEventListener('load', updateProgress);
-      document.removeEventListener('readystatechange', updateProgress);
-    };
-  }, []);
+   
   return (
     <html lang="fr">
       <body className="relative">
-        <Suspense fallback={ <div className='mt-[50vh]'>
-      {loadingProgress < 100 ? (
-        <div>
-          <p>Loading... {loadingProgress}%</p>
-          <div className="loader" style={{ width: `${loadingProgress}%` }}></div>
+        <Suspense fallback={<div className='h-screen w-full'>
+        <div className="h-screen relative  w-full flex justify-center items-center">
+        <div id='ok' className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
+        <p className='absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2'>Chargement ...</p>
         </div>
-      ) : (
-        <p>Chargement terminé!</p>
-      )}
-      {/* Votre contenu principal va ici */}
-    </div>}>
+
+  
+        </div>}>
        
     <Header2 />
     {children}
