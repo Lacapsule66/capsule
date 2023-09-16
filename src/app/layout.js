@@ -1,8 +1,9 @@
+"use client"
 import Header2 from '@/components/Header2'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
-import { Suspense } from 'react'
+import { Suspense, useState, useEffect } from 'react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,10 +13,40 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  const [loadingProgress, setLoadingProgress] = useState(0);
+
+  useEffect(() => {
+    const updateProgress = () => {
+      if (document.readyState === 'complete') {
+        setLoadingProgress(100);
+      } else {
+        setLoadingProgress((document.readyState === 'loading' ? 10 : 90) + Math.floor(Math.random() * 10));
+      }
+    };
+
+    window.addEventListener('load', updateProgress);
+    document.addEventListener('readystatechange', updateProgress);
+
+    return () => {
+      window.removeEventListener('load', updateProgress);
+      document.removeEventListener('readystatechange', updateProgress);
+    };
+  }, []);
   return (
     <html lang="fr">
       <body className="relative">
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={ <div className='mt-[50vh]'>
+      {loadingProgress < 100 ? (
+        <div>
+          <p>Loading... {loadingProgress}%</p>
+          <div className="loader" style={{ width: `${loadingProgress}%` }}></div>
+        </div>
+      ) : (
+        <p>Chargement terminé!</p>
+      )}
+      {/* Votre contenu principal va ici */}
+    </div>}>
+       
     <Header2 />
     {children}
     <Footer/>
