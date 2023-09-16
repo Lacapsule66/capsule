@@ -1,3 +1,4 @@
+import Image from "next/legacy/image"
 import MyModal from "./Modal"
 
 const incentives = [
@@ -66,8 +67,11 @@ const incentives = [
               <MyModal />
               </div>
               <div className="aspect-w-3 aspect-h-2 bg-gray-100 rounded-lg overflow-hidden">
-                <img
-                  src="/fpv.jpeg"
+                <Image
+                height={500}
+                width={500}
+             layout="responsive"
+                  src="/fpv-min.webp"
                   alt=""
                   className="object-center object-cover"
                 />

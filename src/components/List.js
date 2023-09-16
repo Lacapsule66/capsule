@@ -1,4 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
+
+import Image from "next/legacy/image"
+
 /* eslint-disable @next/next/no-img-element */
 const stats = [
     { label: 'Fondé en', value: '2021' },
@@ -39,9 +42,12 @@ const stats = [
             <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0 lg:max-w-none lg:py-20">
               {/* Testimonial card*/}
               <div className="relative pt-64 pb-10 rounded-2xl shadow-xl overflow-hidden">
-                <img
+                <Image
+                layout="fill"
+                width={500}
+                height={500}
                   className="absolute inset-0 h-full w-full object-cover"
-                  src="/marketing.jpeg"
+                  src="/marketing-min.webp"
                   alt=""
                 />
                 <div className="absolute inset-0 bg-indigo-200 mix-blend-multiply" />
