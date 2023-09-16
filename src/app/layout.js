@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 
-    gsap.to("#ok", {rotate: 360, duration: 2, repeat: -1, ease: "none"})
+    // gsap.to("#ok", {rotate: 360, duration: 2, repeat: -1, ease: "none"})
 
    
   return (
