@@ -1,4 +1,4 @@
-"use client"
+
 import Header2 from '@/components/Header2'
 import './globals.css'
 import { Inter } from 'next/font/google'
