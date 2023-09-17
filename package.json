@@ -16,6 +16,8 @@
     "@react-three/fiber": "^8.13.0",
     "@react-three/postprocessing": "^2.12.3",
     "autoprefixer": "10.4.14",
+    "eslint": "8.41.0",
+    "eslint-config-next": "13.4.3",
     "foliov2": "file:",
     "gsap": "npm:@gsap/shockingly@^3.12.2",
     "next": "13.4.3",

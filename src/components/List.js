@@ -1,8 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-"use client"
-import gsap from "gsap"
+
 import Image from "next/legacy/image"
-import { useEffect } from "react"
 
 /* eslint-disable @next/next/no-img-element */
 const stats = [
@@ -13,15 +11,6 @@ const stats = [
   ]
   
   export default function Example() {
-    useEffect(() => {
-     gsap.to("#count", 
-      { innerText: 950, duration: 3, 
-        snap: {
-          innerText:1
-        } 
-        });
-      
-    }, [])
     return (
       <div className="relative bg-white py-16 sm:py-24 reveal2">
         <div className="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
@@ -120,12 +109,17 @@ const stats = [
               <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
                 {stats.map((stat) => (
                   <div key={stat.label} className="border-t-2 border-gray-100 pt-6">
-                    <dt  className="text-base font-medium text-gray-500">{stat.label}</dt>
-                    <dd id="count" className="text-3xl font-extrabold tracking-tight text-gray-900">{stat.value}</dd>
+                    <dt className="text-base font-medium text-gray-500">{stat.label}</dt>
+                    <dd className="text-3xl font-extrabold tracking-tight text-gray-900">{stat.value}</dd>
                   </div>
                 ))}
               </dl>
-           
+              {/* <div className="mt-10">
+                <a href="#" className="text-base font-medium text-indigo-600">
+                  {' '}
+                  Learn more about how we're changing the world <span aria-hidden="true">&rarr;</span>{' '}
+                </a>
+              </div> */}
             </div>
           </div>
         </div>
