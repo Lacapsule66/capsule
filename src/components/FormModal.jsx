@@ -1,6 +1,5 @@
 "use client"
 import React, { useRef,useState } from 'react';
-import { MailIcon, PhoneIcon } from "@heroicons/react/outline";
 import emailjs from '@emailjs/browser';
 export default function FormModal() {
   const [toggleRes , setToggleRes] = useState(false)

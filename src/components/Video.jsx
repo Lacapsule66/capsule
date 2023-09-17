@@ -12,7 +12,7 @@ export default function Video() {
         trigger: "#play",
         start: "top +=100",
         end: "bottom top",
-        markers: true,
+     
         onEnter: () => videoRef.current.play(),
     
       }

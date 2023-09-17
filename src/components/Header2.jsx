@@ -1,7 +1,6 @@
 "use client"
 
 import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { SearchIcon } from '@heroicons/react/solid'
 import {  MenuIcon, XIcon } from '@heroicons/react/outline'
 
 import Link from 'next/link'
