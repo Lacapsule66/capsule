@@ -200,8 +200,7 @@ export default function Home() {
       <Techno />
      
         </div>
-      {/* <div className="r relative z-10 w-screen h-[120vh] bg-blue-500">
-      </div> */}
+   
   </main>
   )
 }
