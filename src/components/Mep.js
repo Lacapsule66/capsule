@@ -16,13 +16,7 @@ const Layout = () => {
           <br /> dans le digital
         </h2>
       </div>
-      <div className="row-start-5">
-        <h3 className="text-3xl font-title text-center lg:text-4xl p-2 tracking-widest ">
-          Nous sommes une agence de communication digitale basée dans les Pyrénnées Orientales.
-          <br />
-          Nous accompagnons les entreprises dans leur transformation digitale.
-        </h3>
-      </div>
+     
     </section>
   );
 };
