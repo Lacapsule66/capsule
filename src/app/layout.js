@@ -8,8 +8,37 @@ import Time from '@/components/Time'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'La Capsule - Agence de communication digitale',
-  description: 'Agence de communication digitale basée dans les Pyrénées Orientales. Nous accompagnons les entreprises dans leur transformation digitale.',
+  title: "Agence La Capsule - Faites un bond en avant dans le digital",
+  description: "L'agence de web La Capsule, vous accompagne dans votre stratégie de communication et de marketing digital. Créer des site web de qualité des publicités efficaces.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  alternates :{
+    canonical: "https://www.agence-la-capsule.fr/"
+  },
+  generator : "NextJS",
+  applicationName : "Agence La Capsule",
+  referrer: 'origin-when-cross-origin',
+  authors : [{name: "Romain Marty"}],
+  creator : "Romain Marty",
+  openGraph: {
+    title: 'Agence La Capsule - Faites un bond en avant dans le digital',
+    description: 'L\'agence de web La Capsule, vous accompagne dans votre stratégie de communication et de marketing digital. Créer des site web de qualité des publicités efficaces.',
+    url: 'https://www.agence-la-capsule.fr/',
+    siteName: 'Agence La Capsule',
+    locale: 'fr_FR',
+    type: 'website',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+   
+  },
 }
 
 
