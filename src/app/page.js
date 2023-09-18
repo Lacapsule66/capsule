@@ -3,8 +3,8 @@ import Image from 'next/image'
 import Intro from '@/components/Intro'
 import React,  {Suspense, useState, useRef, useEffect} from 'react'
 import { gsap } from "gsap/dist/gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import { SplitText } from "gsap/dist/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 import Pricing from '@/components/Pricing'
 import Example from '@/components/List'
 import Techno from '@/components/Techno';
