@@ -56,7 +56,7 @@ function Banana({ index, z, speed }) {
   )
 }
 
-export default function Bananas({ speed = 1, count = 40, depth = 40, easing = (x) => Math.sqrt(1 - Math.pow(x - 1, 2)) }) {
+export default function Bananas({ speed = 1, count = 12, depth = 15, easing = (x) => Math.sqrt(1 - Math.pow(x - 1, 2)) }) {
   return (
     // No need for antialias (faster), dpr clamps the resolution to 1.5 (also faster than full resolution)
     <Canvas gl={{ antialias: false }} dpr={[1, 1.5]} camera={{ position: [0, 0, 10], fov: 20, near: 0.01, far: depth + 15 }}>
