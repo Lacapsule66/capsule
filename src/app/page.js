@@ -17,8 +17,6 @@ export default function Home() {
 
   const [speed, setSpeed] = useState(1);
   const ref = useRef(null);
-  gsap.registerPlugin(ScrollTrigger); // enregistrez ScrollTrigger pour l'utiliser avec GSAP
-
   useEffect(() => {
     const split3 = new SplitText("#scale3", { type: "chars, words, lines" });
     gsap.fromTo(split3.words, {
@@ -74,6 +72,7 @@ export default function Home() {
         start: "top 80%",
         end: "bottom 20%",
         toggleActions: "restart none none reverse",
+        markers: true
       }
     });
     const split = new SplitText("#scale", { type: "chars, words, lines" });
@@ -102,6 +101,7 @@ export default function Home() {
         start: "top 80%",
         end: "bottom 20%",
         toggleActions: "restart none none reverse",
+        markers: true
       }
     });
     
@@ -121,6 +121,7 @@ export default function Home() {
       start: "top 80%",
       end: "bottom 20%",
       toggleActions: "restart none none reverse",
+      markers: true
   
     }
   });
@@ -144,6 +145,10 @@ export default function Home() {
     }
   });
     
+  }, []);
+
+  useEffect(() => {
+   
       
       
     // Définissez votre animation GSAP ici
