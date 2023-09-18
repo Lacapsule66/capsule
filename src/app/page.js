@@ -72,7 +72,6 @@ export default function Home() {
         start: "top 80%",
         end: "bottom 20%",
         toggleActions: "restart none none reverse",
-        markers: true
       }
     });
     const split = new SplitText("#scale", { type: "chars, words, lines" });
@@ -101,49 +100,10 @@ export default function Home() {
         start: "top 80%",
         end: "bottom 20%",
         toggleActions: "restart none none reverse",
-        markers: true
       }
     });
     
-    gsap.fromTo(".reveal", {
-    x : 100,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.inOut",
-    stagger: {
-      amount: 0.2
-    }
-  }, {
-    x: 0,
-    opacity: 1,
-    scrollTrigger: {
-      trigger: ".reveal",
-      start: "top 80%",
-      end: "bottom 20%",
-      toggleActions: "restart none none reverse",
-      markers: true
-  
-    }
-  });
-  gsap.fromTo(".reveal2", {
-    x : -100,
-    opacity: 0,
-    duration: 1,
-    ease: "power2.inOut",
-    stagger: {
-      amount: 0.2
-    }
-  }, {
-    x: 0,
-    opacity: 1,
-    scrollTrigger: {
-      trigger: ".reveal2",
-      start: "top 80%",
-      end: "bottom 20%",
-      toggleActions: "restart none none reverse",
-  
-    }
-  });
+   
     
   }, []);
 
