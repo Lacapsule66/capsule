@@ -85,7 +85,7 @@ export default function Home() {
       rotation: 90,
 
     }, {
-      delay: 0.8,
+      delay: 2.1,
       opacity: 1,
       y: 0,
       skewY: 0,
@@ -95,12 +95,7 @@ export default function Home() {
       stagger: 0.08,
       duration: 0.66,
       ease: "power2.out",
-      scrollTrigger: {
-        trigger: "#scale",
-        start: "top 80%",
-        end: "bottom 20%",
-        toggleActions: "restart none none reverse",
-      }
+     
     });
     
    
