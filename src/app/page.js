@@ -147,14 +147,13 @@ export default function Home() {
   }, []); 
   return (
     <main className="relative h-h300 overflow-x-hidden">
-      <Suspense fallback={    <div className="r relative w-screen h-[120vh]">
-</div>}>
+
     <div className="r relative w-screen h-[120vh]">
      
           <Intro kill={kill} speed={speed} cameras={1} />
        
     </div>
-    </Suspense>
+
     <div className="r relative z-10 w-screen h-full bg-gray-900">
       <Example />
       <Service />
