@@ -4,7 +4,7 @@ import Bananas from "./Bananas";
 
 export default function Intro({ kill, speed, }) {
   return (
-    <div className="fixed">
+    <div className=" absolute top-0">
       <Layout />
       <Suspense fallback={<div className="h-screen w-full absolute top-0 z-[200]"> </div>}>
       <div className="b h-screen w-screen absolute -z-10 " id="Bananas">
