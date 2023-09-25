@@ -1,13 +1,20 @@
 "use client"
 import React, { useRef,useState } from 'react';
 import emailjs from '@emailjs/browser';
+function classNames(...classes) {
+  return classes.filter(Boolean).join(' ')
+}
+
 export default function FormModal() {
+  const arrayDate =["Lundi : 9h-12h / 14h-18h","Mardi : 9h-12h / 14h-18h","Mercredi : 9h-12h / 14h-18h","Jeudi : 9h-12h / 14h-18h","Vendredi : 9h-12h / 14h-18h","Samedi : 9h-12h / 14h-18h"]
+
   const [toggleRes , setToggleRes] = useState(false)
   const form = useRef();
-  const[message, setMessage] = useState(false)
+
   const sendEmail = (e) => {
     e.preventDefault();
-  
+
+
 
     emailjs.sendForm('service_rbymofs', 'template_9h4m9t1', form.current, 'mfgTE9qT16rjS6y-3')
       .then((result) => {
@@ -40,6 +47,30 @@ export default function FormModal() {
                 />
               </div>
               <div>
+              <div>
+                <label htmlFor="message" className="sr-only">
+                 Indiquez la date et l'heure de votre pour être rappelé !
+                </label>
+              
+     <label htmlFor="message" className="sr-only">
+                  Indiquez la date et l'heure de votre pour être rappelé !
+                </label>
+               {arrayDate.map((item) => (
+              
+               <div className="">
+                <p>{item}</p> 
+                <input
+                  type="radio"
+                  name="message"
+                  id="message"
+                  value={item}
+                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border-gray-300 rounded-md"
+                />
+                </div>
+
+             
+                ))}
+              </div>
                 <label htmlFor="email" className="sr-only">
                   Votre Mail
                 </label>
@@ -65,20 +96,7 @@ export default function FormModal() {
                   placeholder="Numéro de téléphone"
                 />
               </div>
-              <div>
-                <label htmlFor="message" className="sr-only">
-                 Indiquez la date et l'heure de votre pour être rappelé !
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="block w-full shadow-sm py-3 px-4 placeholder-gray-500 focus:ring-indigo-500 focus:border-indigo-500 border border-gray-300 rounded-md"
-                  placeholder="Indiquez la date et l'heure de votre pour être rappelé !
-                  "
-                  defaultValue={''}
-                />
-              </div>
+       
               <div>
                 <button
                   type="submit"
