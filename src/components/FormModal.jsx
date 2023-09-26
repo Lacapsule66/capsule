@@ -106,6 +106,8 @@ export default function FormModal() {
                 </button>
               </div>
             </form>
+            {toggleRes !== false ? <p className='text-green-500'>{toggleRes}</p> : null}
+
           </div>
         </div>
       </div>
