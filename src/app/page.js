@@ -10,6 +10,7 @@ import Example from '@/components/List'
 import Techno from '@/components/Techno';
 import Service from '@/components/Service';
 import Video from '@/components/Video';
+import CanvasShapes from '@/components/Canva';
 gsap.registerPlugin(SplitText);
 gsap.registerPlugin(ScrollTrigger);
 export default function Home() {
@@ -150,8 +151,8 @@ export default function Home() {
 
     <div className="r relative w-screen h-[120vh]">
      
-          <Intro kill={kill} speed={speed} cameras={1} />
-       
+          {/* <Intro kill={kill} speed={speed} cameras={1} /> */}
+          <CanvasShapes/>
     </div>
 
     <div className="r relative z-10 w-screen h-full bg-gray-900">
